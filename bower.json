@@ -1,0 +1,19 @@
+{
+  "name": "expressApp",
+  "version": "0.0.1",
+  "homepage": "https://github.com/miroamarillo/expressApp",
+  "authors": [
+    "Julian Pineda <studio@miroamarillo.com>"
+  ],
+  "description": "Express test app",
+  "main": "server.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
