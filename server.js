@@ -22,7 +22,13 @@ app.get('/:nameOfDog', function(req, res){
 	res.json(status, object);
 	//to send jsonp (json with padding)
 	res.jsonp(status, object); // callback ({})
+	//to download a file instead of opening a new page
+	res.download(file);
 
+	res.render(file, props, function(err, html){
+		//do something with the html template before sending it
+		res.send(200, html);
+	})
 
 })
 
