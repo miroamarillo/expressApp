@@ -5,26 +5,25 @@ var express 	= require('express'),
 
 
 app.get('/:nameOfDog', function(req, res){
-	//Request params
-	//params is an object from the request
-	//the parameters "nameOfDog" will be available
-	req.params.nameOfDog;
-	//Where ATTR is what goes after the parameter
-	//ie: :nameOfDog?name=Fryda
-	req.query.ATTR;
-	// body ATTR
-	req.body.ATTR;
-	//param method
-	req.param('ATTR'); //it will search in this order: params, body, query
-	//route method or object
-	req.route;
-	//request to original Url
-	req.originalUrl;
-	// If cookies middleware is used
-	req.cookies.ATTR;
-	req.get(); // any header name
-	//Objects specific for special headers
-	req.accepts('text/html'); //application/json or text/plain
+	//status method
+	res.status(200); //This only sends one header
+	res.get(header, value); // for several values
+	res.get(header);
+	//If working with cookies
+	res.cookie(name, value);
+	//to clear a cookie
+	res.clearCookie(name);
+
+	//to redirect
+	res.redirect(status, path); //the status is optional
+	//to send
+	res.send(satus, text);
+	//to send a json object
+	res.json(status, object);
+	//to send jsonp (json with padding)
+	res.jsonp(status, object); // callback ({})
+
+
 })
 
 app.listen(3080, function(){
