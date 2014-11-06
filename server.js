@@ -7,8 +7,14 @@ var express 	= require('express'),
 app.get('/', function(req, res){
 	//format method. can get an object.
 	res.format({
-
-		'application/json': function(){
+		// text: function(){
+		// 	res.send('text response');
+		// },
+		// html: function(){
+		// 	res.render('index.jade');
+		// },
+		//This only works if the previous are not present. Bug??
+		json: function(){
 		    res.send({ message: 'hey' });
 		}
 	});
