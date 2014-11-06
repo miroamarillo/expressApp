@@ -1,6 +1,6 @@
 var express 	= require('express'),
 	//This is needed to parse the body of the request
-	//bodyParser 	= require('body-parser'),
+	bodyParser 	= require('body-parser'),
 	app 		= express();
 
 
@@ -15,7 +15,7 @@ app.get('/', function(req, res){
 		// },
 		//This only works if the previous are not present. Bug??
 		json: function(){
-		    res.send({ message: 'hey' });
+		    res.send({ "message": "Hello I'm Jason" });
 		}
 	});
 
