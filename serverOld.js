@@ -20,7 +20,7 @@ var names = [];
 
 app
 	//This is what is called a third party middleware
-	.use(bodyParser.urlencoded())
+	.use(bodyParser.urlencoded({extended: true}))
 	//Custom middleware can also be created.  Notice that when created
 	//and then applied with use, it will be used by every method because
 	//it is not linked to an specific route like the all method. That
