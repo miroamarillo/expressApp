@@ -40,7 +40,7 @@ app
 	//The functions bellow can also be called route functions
 	//Notice How I pass the log function to the get request
 	.get('/', log, function(req, res){
-		res.render('index.jade', {
+		res.render('index.pug', {
 			title: "Hello Express & Jade and more stuff",
 			names: names
 		});
